@@ -4,8 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.restapimvvm.model.data.PostsItem
 import com.example.restapimvvm.viewmodel.service.Api
+import javax.inject.Inject
 
-class PostsRepository(private val api: Api) {
+class PostsRepository @Inject constructor(private val api: Api) {
 
     private val postsLiveData = MutableLiveData<List<PostsItem>>()
 
